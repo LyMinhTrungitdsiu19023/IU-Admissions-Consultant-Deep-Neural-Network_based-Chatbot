@@ -109,9 +109,9 @@ training = np.array(training)
 output = np.array(output)
 
 net = tflearn.input_data(shape=[None, len(training[0])])
-net = tflearn.fully_connected(net, 10)
-net = tflearn.fully_connected(net, 10)
-net = tflearn.fully_connected(net, 10)
+net = tflearn.fully_connected(net, 128)
+net = tflearn.fully_connected(net, 256)
+net = tflearn.fully_connected(net, 512)
 net = tflearn.fully_connected(net, len(output[0]), activation='softmax')
 net = tflearn.regression(net)
 
